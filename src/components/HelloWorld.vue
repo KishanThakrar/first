@@ -3,6 +3,7 @@
     <h1>{{ msg }}</h1>
     <h1>Smit First Commit</h1>
     <h1>Kisu Second Commit</h1>
+    <h1>Smit Second Commit</h1>
   </div>
 </template>
 
