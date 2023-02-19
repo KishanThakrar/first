@@ -92,6 +92,16 @@ export default {
       this.buttonNoDekai = false;
     }
   },
+  mounted(){
+    let val1 = this.value1
+    let val2 = this.value2
+    if(val1 && val2){
+      this.buttonDisable = false
+    }else {
+      this.buttonDisable = true
+    }
+
+  },
   watch: {
     operation(newValue, oldValue) {
       console.log(oldValue);
