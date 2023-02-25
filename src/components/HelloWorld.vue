@@ -139,8 +139,8 @@ export default {
           this.result = parseInt(this.value1) * parseInt(this.value2);
           break;
       }
-      this.value1 = ''
-      this.value2 = ''
+      this.value1 = null
+      this.value2 = null
       this.validation.reset()
 
     },
@@ -161,7 +161,7 @@ export default {
       }
     },
     clearResult(){
-      this.result = ''
+      this.result = null
     }
   },
 };
