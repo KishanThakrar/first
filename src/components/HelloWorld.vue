@@ -66,7 +66,9 @@ export default {
       let check = Validator.value(value).required()._messages;
       if (check.length == 0) {
         if(this.value1 && this.value2 != null){
+           if(this.value1 && this.value2 != ''){
         this.buttonDisable = false;
+           }
         }
       } else {
         this.buttonDisable = true;
@@ -77,7 +79,9 @@ export default {
       let check = Validator.value(value).required()._messages;
       if (check.length == 0) {
         if(this.value1 && this.value2 != null){
+          if(this.value1 && this.value2 != ''){
         this.buttonDisable = false;
+          }
         } 
       } else {
         this.buttonDisable = true;
