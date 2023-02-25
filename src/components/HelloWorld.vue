@@ -115,6 +115,7 @@ export default {
 
   methods: {
     calculation() {
+      this.result = ''
       switch (this.operation) {
         case "Addition":
           this.result += parseInt(this.value1) + parseInt(this.value2);
@@ -129,6 +130,10 @@ export default {
           this.result = parseInt(this.value1) * parseInt(this.value2);
           break;
       }
+      this.value1 = ''
+      this.value2 = ''
+      this.validation.reset()
+
     },
     changeOperation(message) {
       switch (message) {
