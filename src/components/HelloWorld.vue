@@ -45,6 +45,11 @@
       >
 
       <h1 v-if="result" class="title space">Result:{{ result }}</h1>
+      
+            <b-button v-if="result" class="is-danger"
+            @click="clearResult()"
+            >Clear</b-button>
+            
     </section>
   </div>
 </template>
@@ -60,7 +65,9 @@ export default {
     value1: function (value) {
       let check = Validator.value(value).required()._messages;
       if (check.length == 0) {
+        if(this.value1 && this.value2 != null){
         this.buttonDisable = false;
+        }
       } else {
         this.buttonDisable = true;
       }
@@ -69,7 +76,9 @@ export default {
     value2: function (value) {
       let check = Validator.value(value).required()._messages;
       if (check.length == 0) {
+        if(this.value1 && this.value2 != null){
         this.buttonDisable = false;
+        } 
       } else {
         this.buttonDisable = true;
       }
@@ -151,6 +160,9 @@ export default {
           break;
       }
     },
+    clearResult(){
+      this.result = ''
+    }
   },
 };
 </script>
